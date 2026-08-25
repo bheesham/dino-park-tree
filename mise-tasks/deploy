@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+set -eu
+#USAGE arg "<environment>" help="The environment to deploy to" {
+#USAGE   choices "dev" "test" "prod"
+#USAGE }
+#USAGE arg "[tag]" help="The tag to deploy"
+
+case "${usage_environment:-dev}" in
+    dev)
+        REF="branch/master"
+        ;;
+    test)
+        REF="tag/${usage_tag:?}-test"
+        ;;
+    prod)
+        REF="tag/${usage_tag:?}-prod"
+        ;;
+    *)
+        echo "Only dev, test, and prod are supported." >&2
+        exit 1
+        ;;
+esac
+
+AWS_PROFILE=iam-admin aws codebuild start-build \
+    --project-name dino-park-tree \
+    --environment-variables-override "name=MANUAL_DEPLOY_TRIGGER,value=${REF:?}"
