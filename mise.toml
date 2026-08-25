@@ -1,3 +1,4 @@
 [tools]
 helm = "latest"
 node = "22"
+terraform = "1.15.9"
