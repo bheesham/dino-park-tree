@@ -12,9 +12,9 @@ variable "buildspec_file" {
   default     = "buildspec.yml"
 }
 
-# Find all the supported images by AWS here: 
+# Find all the supported images by AWS here:
 # https://docs.aws.amazon.com/codebuild/latest/userguide/build-env-ref-available.html
 variable "build_image" {
-  default = "aws/codebuild/standard:4.0"
+  default = "aws/codebuild/amazonlinux-x86_64-standard:5.0-25.06.25"
 }
 

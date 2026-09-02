@@ -5,25 +5,32 @@ version = "3.18.4"
 backend = "aqua:helm/helm"
 
 [tools.helm."platforms.linux-arm64"]
-url = "https://get.helm.sh/helm-3.18.4-linux-arm64.tar.gz"
+checksum = "sha256:c0a45e67eef0c7416a8a8c9e9d5d2d30d70e4f4d3f7bea5de28241fffa8f3b89"
+url = "https://get.helm.sh/helm-v3.18.4-linux-arm64.tar.gz"
 
 [tools.helm."platforms.linux-arm64-musl"]
-url = "https://get.helm.sh/helm-3.18.4-linux-arm64.tar.gz"
+checksum = "sha256:c0a45e67eef0c7416a8a8c9e9d5d2d30d70e4f4d3f7bea5de28241fffa8f3b89"
+url = "https://get.helm.sh/helm-v3.18.4-linux-arm64.tar.gz"
 
 [tools.helm."platforms.linux-x64"]
-url = "https://get.helm.sh/helm-3.18.4-linux-amd64.tar.gz"
+checksum = "sha256:f8180838c23d7c7d797b208861fecb591d9ce1690d8704ed1e4cb8e2add966c1"
+url = "https://get.helm.sh/helm-v3.18.4-linux-amd64.tar.gz"
 
 [tools.helm."platforms.linux-x64-musl"]
-url = "https://get.helm.sh/helm-3.18.4-linux-amd64.tar.gz"
+checksum = "sha256:f8180838c23d7c7d797b208861fecb591d9ce1690d8704ed1e4cb8e2add966c1"
+url = "https://get.helm.sh/helm-v3.18.4-linux-amd64.tar.gz"
 
 [tools.helm."platforms.macos-arm64"]
-url = "https://get.helm.sh/helm-3.18.4-darwin-arm64.tar.gz"
+checksum = "sha256:041849741550b20710d7ad0956e805ebd960b483fe978864f8e7fdd03ca84ec8"
+url = "https://get.helm.sh/helm-v3.18.4-darwin-arm64.tar.gz"
 
 [tools.helm."platforms.macos-x64"]
-url = "https://get.helm.sh/helm-3.18.4-darwin-amd64.tar.gz"
+checksum = "sha256:860a7238285b44b5dc7b3c4dad6194316885d7015d77c34e23177e0e9554af8f"
+url = "https://get.helm.sh/helm-v3.18.4-darwin-amd64.tar.gz"
 
 [tools.helm."platforms.windows-x64"]
-url = "https://get.helm.sh/helm-3.18.4-windows-amd64.tar.gz"
+checksum = "sha256:476f7051b792b2792c154193550a49598eeb1eca770ccd7e2fc5b1888c6bdb2c"
+url = "https://get.helm.sh/helm-v3.18.4-windows-amd64.tar.gz"
 
 [[tools.node]]
 version = "22.19.0"
@@ -34,7 +41,9 @@ checksum = "sha256:d32817b937219b8f131a28546035183d79e7fd17a86e38ccb8772901a7cd9
 url = "https://nodejs.org/dist/v22.19.0/node-v22.19.0-linux-arm64.tar.gz"
 
 [tools.node."platforms.linux-arm64-musl"]
-url = "https://unofficial-builds.nodejs.org/download/release/v22.19.0/node-v22.19.0-linux-arm64-musl.tar.gz"
+checksum = "sha256:4cea680423f98abc6a2a5ca127fb34c5f6586c24217f57749be6ea886c9be9a6"
+url = "https://nodejs.org/dist/v22.19.0/node-v22.19.0.tar.gz"
+install = "source"
 
 [tools.node."platforms.linux-x64"]
 checksum = "sha256:d36e56998220085782c0ca965f9d51b7726335aed2f5fc7321c6c0ad233aa96d"
@@ -55,3 +64,35 @@ url = "https://nodejs.org/dist/v22.19.0/node-v22.19.0-darwin-x64.tar.gz"
 [tools.node."platforms.windows-x64"]
 checksum = "sha256:ea3fad0e67a991d8477d8c01344b56e69c676ccb733f065b22436994b1253f86"
 url = "https://nodejs.org/dist/v22.19.0/node-v22.19.0-win-x64.zip"
+
+[[tools.terraform]]
+version = "1.15.9"
+backend = "aqua:hashicorp/terraform"
+
+[tools.terraform."platforms.linux-arm64"]
+checksum = "sha256:0afa6c29f61ca5ea270e950e43e50ecf2418b598507bf580e8ae76e1e6699b19"
+url = "https://releases.hashicorp.com/terraform/1.15.9/terraform_1.15.9_linux_arm64.zip"
+
+[tools.terraform."platforms.linux-arm64-musl"]
+checksum = "sha256:0afa6c29f61ca5ea270e950e43e50ecf2418b598507bf580e8ae76e1e6699b19"
+url = "https://releases.hashicorp.com/terraform/1.15.9/terraform_1.15.9_linux_arm64.zip"
+
+[tools.terraform."platforms.linux-x64"]
+checksum = "sha256:76edd0b22d2f27d3d2e097cd793209646f719cf60f02ff3af626b07361137da1"
+url = "https://releases.hashicorp.com/terraform/1.15.9/terraform_1.15.9_linux_amd64.zip"
+
+[tools.terraform."platforms.linux-x64-musl"]
+checksum = "sha256:76edd0b22d2f27d3d2e097cd793209646f719cf60f02ff3af626b07361137da1"
+url = "https://releases.hashicorp.com/terraform/1.15.9/terraform_1.15.9_linux_amd64.zip"
+
+[tools.terraform."platforms.macos-arm64"]
+checksum = "sha256:05b27586a5d7d84105690ecccc7edbbf48bc3d6d577745cb61f163ba990adf4f"
+url = "https://releases.hashicorp.com/terraform/1.15.9/terraform_1.15.9_darwin_arm64.zip"
+
+[tools.terraform."platforms.macos-x64"]
+checksum = "sha256:3e97c499fac8074adfa3760300662a0158f2fd325144965dd0028deec4086c6b"
+url = "https://releases.hashicorp.com/terraform/1.15.9/terraform_1.15.9_darwin_amd64.zip"
+
+[tools.terraform."platforms.windows-x64"]
+checksum = "sha256:b0fcd57e2abd19fc6d8e64b86a22f5f3fb734b0407385553cdcffc64677f18b6"
+url = "https://releases.hashicorp.com/terraform/1.15.9/terraform_1.15.9_windows_amd64.zip"
